@@ -74,7 +74,7 @@ jobs:
           command: |
             sudo apt-get -y -qq update
             sudo apt-get install -y awscli
-            sudo apt-get install -y python-pip python-dev build-essential
+            sudo apt-get install -y python3-pip python-dev build-essential
       - run:
           name: Build project
           command: |
@@ -86,7 +86,7 @@ jobs:
       - run:
           name: "Deploy to AWS Cloudfront"
           command: |
-            aws configure set preview.cloudfront
+            aws configure set preview.cloudfront true
             if ["${CIRCLE_BRANCH}" == "main"]
             then
               aws cloudfront create-invalidation --distribution-id ${PRODUCTION_DISTRIBUTION_ID} --paths /\*

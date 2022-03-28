@@ -111,13 +111,13 @@ workflows:
                 - staging 
                 - main
       - deploy-to-aws-cloudfront:
-        requires:
-          - deploy-to-aws-s3
-        filters:
-          branches:
-            only:
-              - develop
-              - staging 
-              - main
+          requires:
+            - deploy-to-aws-s3
+          filters:
+            branches:
+              only:
+                - develop
+               - staging 
+                - main
 
 

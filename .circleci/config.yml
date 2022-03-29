@@ -60,7 +60,7 @@ jobs:
       - *restore-cache
       - run:
           name: "Run Linting"
-          command: npm run lint
+          command: yarn run lint
 
 
 

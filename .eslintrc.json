@@ -5,7 +5,7 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "config:standard"
+        "standard"
     ],
     "globals": {
         "Atomics": "readonly",

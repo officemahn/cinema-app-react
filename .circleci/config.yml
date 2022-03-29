@@ -18,7 +18,7 @@ aliases:
   - &install-dependencies
     run:
       name: Install dependencies
-      command: npm install npm-update-all -g
+      command: npm install --legacy-peer-deps
   - &save_cache
     save_cache:
       paths:
@@ -60,7 +60,7 @@ jobs:
       - *restore-cache
       - run:
           name: "Run Linting"
-          command: yarn run lint
+          command: npm run lint
 
 
 

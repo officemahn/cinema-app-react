@@ -36,7 +36,7 @@ aliases:
      run:
       name: Build project
       command: |
-        npm install
+        npm install --legacy-peer-deps
         npm run build
         cd build
         zip ../build.zip -r *.[^.]*

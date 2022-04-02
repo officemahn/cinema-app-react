@@ -90,10 +90,10 @@ jobs:
       - run:
           name: Terraform Validate & Format
           command: |
-          cd infrastructure/
-          terraform init -backend=false
-          terraform validate
-          terraform fmt -check
+            cd infrastructure/
+            terraform init -backend=false
+            terraform validate
+            terraform fmt -check
 
   terraform-plan-and-apply:
     executor: terraform-executor
@@ -105,18 +105,18 @@ jobs:
       - run:
           name: Terraform Plan
           command: |
-          cd artifacts/infrastructure/
-          terraform init
-          terraform workspace select ${CIRCLE_BRANCH} || terraform workspace new ${CIRCLE_BRANCH}
-          terraform plan
+            cd artifacts/infrastructure/
+            terraform init
+            terraform workspace select ${CIRCLE_BRANCH} || terraform workspace new ${CIRCLE_BRANCH}
+            terraform plan
       - run:
           name: Terraform Apply
           command: |
-          cd artifacts/infrastructure/
-          terraform workspace select ${CIRCLE_BRANCH}
-          terraform apply --auto-approve
-          terraform output cinema_app_bucket_name > ../cinema_bucket_name.txt
-          terraform output cloudfront_distribution_id > ../cloudfront_distribution_id.txt
+            cd artifacts/infrastructure/
+            terraform workspace select ${CIRCLE_BRANCH}
+            terraform apply --auto-approve
+            terraform output cinema_app_bucket_name > ../cinema_bucket_name.txt
+            terraform output cloudfront_distribution_id > ../cloudfront_distribution_id.txt
 
       - persist_to_workspace:
           root: ./

@@ -35,9 +35,9 @@ resource "aws_s3_bucket_website_configuration" "cinema_app_s3_bucket" {
   }
 }
 
-resource "aws_s3_bucket_policy" "allow_access_from_another_account" {
-  bucket = "${local.prefix}-app"
-   policy = data.aws_iam_policy_document.allow_access_from_another_account.json
+resource "aws_s3_bucket_policy" "cinema_app_s3_bucket" {
+    bucket = "${local.prefix}-app"
+    policy = data.aws_iam_policy_document.allow_access_from_another_account.json
 # {
 #     "Version": "2012-10-17",
 #     "Statement":  [

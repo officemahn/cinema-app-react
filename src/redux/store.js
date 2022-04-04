@@ -6,10 +6,7 @@ import rootReducers from './reducers';
 const initialState = {};
 const middleWare = [thunk];
 
-export const store = createStore(
-  rootReducers,
-  initialState,
-  composeWithDevTools(applyMiddleware(...middleWare)),
-);
+// eslint-disable-next-line max-len
+export const store = createStore(rootReducers, initialState, composeWithDevTools(applyMiddleware(...middleWare)));
 
 export default store;

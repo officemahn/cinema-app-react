@@ -6,11 +6,11 @@ import './App.css';
 import store from './redux/store';
 
 const App = () => (
-    <Provider store={store}>
-      <div className="app">
-        <h1> REACT REDUX SETUP</h1>
-      </div>
-    </Provider>
+  <Provider store={store}>
+    <div className="app">
+      <h1> REACT REDUX SETUP</h1>
+    </div>
+  </Provider>
 );
 
 export default App;

@@ -3,6 +3,7 @@
     "browser": true,
     "es6": true
   },
+  // "eslint.workingDirectories": [{"mode": "auto"}],
   "extends": ["plugin:react/recommended", "airbnb-base"],
   "globals": {
     "Atomics": "readonly",
@@ -13,7 +14,9 @@
       "jsx": true
     },
     "ecmaVersion": 2020,
-    "sourceType": "module"
+    "sourceType": "module",
+    "requireConfigFile": "false",
+    "babelOptions": { "configFile": "./.babelrc",}
   },
   "settings": {
     "react": {
@@ -21,6 +24,7 @@
     }
   },
   "plugins": ["react"],
+  "parser": "@babel/eslint-parser",
   "rules": {
     "semi": [2, "always"],
     "space-before-function-paren": [0, { "anonymous": "always", "named": "always" }],

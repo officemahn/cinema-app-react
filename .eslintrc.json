@@ -1,34 +1,33 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es2020": true
   },
-  // "eslint.workingDirectories": [{"mode": "auto"}],
-  "extends": ["plugin:react/recommended", "airbnb-base"],
+  "extends": ["plugin:react/recommended", "standard"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
+
   "parserOptions": {
+    "parser": "babel-eslint",
     "ecmaFeatures": {
       "jsx": true
     },
     "ecmaVersion": 2020,
-    "sourceType": "module",
-    "requireConfigFile": "false",
-    "babelOptions": { "configFile": "./.babelrc",}
+    "sourceType": "module"
   },
   "settings": {
     "react": {
-      "version": "17.0.2"
+      "version": "16.0"
     }
   },
   "plugins": ["react"],
-  "parser": "@babel/eslint-parser",
   "rules": {
     "semi": [2, "always"],
     "space-before-function-paren": [0, { "anonymous": "always", "named": "always" }],
     "camelcase": 0,
+    "comma-dangle": "off",
     "no-return-assign": 0
   }
 }

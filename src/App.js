@@ -3,12 +3,12 @@ import React from 'react';
 import { Provider } from 'react-redux';
 
 import './App.scss';
-import Header from "./components/header/Header";
+import Header from './components/header/Header';
 import store from './redux/store';
 
 const App = () => (
   <Provider store={store}>
-    <Header/>
+    <Header />
     <div className="app">
       <h1> REACT REDUX SETUP</h1>
     </div>

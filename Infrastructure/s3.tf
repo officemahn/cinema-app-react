@@ -4,9 +4,8 @@
 
 
 resource "aws_s3_bucket" "cinema_app_s3_bucket" {
-  bucket        = "${local.prefix}-app"
+  bucket = "${local.prefix}-app"
   force_destroy = true
-
   tags = local.common_tags
 
 }
@@ -38,15 +37,6 @@ resource "aws_s3_bucket_website_configuration" "cinema_app_s3_bucket" {
 resource "aws_s3_bucket_policy" "cinema_app_s3_bucket" {
   bucket = "${local.prefix}-app"
   policy = data.aws_iam_policy_document.allow_access_from_another_account.json
-# {
-#     "Version": "2012-10-17",
-#     "Statement":  [
-#         {
-#             "Sid": "PublicReadGetObject"
-#         }
-#     ]
-# }
-
 }
 data "aws_iam_policy_document" "allow_access_from_another_account" {
   statement {

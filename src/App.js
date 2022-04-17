@@ -5,12 +5,13 @@ import { Provider } from 'react-redux';
 import './App.scss';
 import Header from './components/header/Header';
 import store from './redux/store';
+import Main from './components/main/Main';
 
 const App = () => (
   <Provider store={store}>
     <Header />
     <div className="app">
-      <h1> REACT REDUX SETUP</h1>
+      <Main />
     </div>
   </Provider>
 );

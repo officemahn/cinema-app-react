@@ -1,4 +1,7 @@
 # Cinema App using REACT
+The application was created using react. It makes API calls to TheMovieDb and renders the information to the client. 
+The search bar allows user to search for a movie.
+
 
 ![p8Kbtx](https://user-images.githubusercontent.com/32247261/165868194-eb10e868-e36b-4b45-bc0c-ef506f0539e9.gif)
 

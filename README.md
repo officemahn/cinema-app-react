@@ -1,6 +1,8 @@
 # Cinema App using REACT
-The application was created using react. It makes API calls to TheMovieDb and renders the information to the client. 
-The search bar allows user to search for a movie.
+The application was created using REACT. It makes API calls to TheMovieDb and renders the information to the client. 
+Users have the ability to select "Now Playing, Popular, Top Rated, Upcoming movies and search for a movie.
+The search bar allows users to type in an input, the input is stored in a useState and that input is then passed along with the API call which returns the results.
+
 
 
 ![p8Kbtx](https://user-images.githubusercontent.com/32247261/165868194-eb10e868-e36b-4b45-bc0c-ef506f0539e9.gif)

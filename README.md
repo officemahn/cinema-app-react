@@ -3,7 +3,7 @@
 ![p8Kbtx](https://user-images.githubusercontent.com/32247261/165868194-eb10e868-e36b-4b45-bc0c-ef506f0539e9.gif)
 
 
-The application was created to show current movies playing along with information about the movie. It was created using REACT, which then makes API calls to TheMovieDb and renders the information to the client.
+The application was created to show current movies playing along with information about the movie. It was created using REACT, which  makes API calls to TheMovieDb and renders the information to the client.
 
 Users have the ability to select "Now Playing, Popular, Top Rated, Upcoming movies and search for a movie.
 
